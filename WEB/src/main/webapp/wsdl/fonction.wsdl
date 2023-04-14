@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="fonctionService" targetNamespace="http://www.com.shop" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.com.shop" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://www.com.shop" schemaLocation="fonction_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="getPriceofProduct">
+    <wsdl:part name="parameters" element="tns:getPriceofProduct">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPriceofProductResponse">
+    <wsdl:part name="parameters" element="tns:getPriceofProductResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeProductCartResponse">
+    <wsdl:part name="parameters" element="tns:removeProductCartResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="OrderResponse">
+    <wsdl:part name="parameters" element="tns:OrderResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Registe">
+    <wsdl:part name="parameters" element="tns:Registe">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addProductCart">
+    <wsdl:part name="parameters" element="tns:addProductCart">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addProductCartResponse">
+    <wsdl:part name="parameters" element="tns:addProductCartResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeProductCart">
+    <wsdl:part name="parameters" element="tns:removeProductCart">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Order">
+    <wsdl:part name="parameters" element="tns:Order">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RegisteResponse">
+    <wsdl:part name="parameters" element="tns:RegisteResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="fonction">
+    <wsdl:operation name="getPriceofProduct">
+      <wsdl:input name="getPriceofProduct" message="tns:getPriceofProduct">
+    </wsdl:input>
+      <wsdl:output name="getPriceofProductResponse" message="tns:getPriceofProductResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeProductCart">
+      <wsdl:input name="removeProductCart" message="tns:removeProductCart">
+    </wsdl:input>
+      <wsdl:output name="removeProductCartResponse" message="tns:removeProductCartResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order">
+      <wsdl:input name="Order" message="tns:Order">
+    </wsdl:input>
+      <wsdl:output name="OrderResponse" message="tns:OrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registe">
+      <wsdl:input name="Registe" message="tns:Registe">
+    </wsdl:input>
+      <wsdl:output name="RegisteResponse" message="tns:RegisteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addProductCart">
+      <wsdl:input name="addProductCart" message="tns:addProductCart">
+    </wsdl:input>
+      <wsdl:output name="addProductCartResponse" message="tns:addProductCartResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="fonctionServiceSoapBinding" type="tns:fonction">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getPriceofProduct">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPriceofProduct">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPriceofProductResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeProductCart">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeProductCart">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeProductCartResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Order">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Order">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="OrderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registe">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Registe">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RegisteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addProductCart">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addProductCart">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addProductCartResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="fonctionService">
+    <wsdl:port name="fonctionPort" binding="tns:fonctionServiceSoapBinding">
+      <soap:address location="http://localhost:8080/WEB/services/fonctionPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

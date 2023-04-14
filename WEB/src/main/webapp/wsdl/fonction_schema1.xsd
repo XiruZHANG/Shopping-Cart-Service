@@ -1,0 +1,79 @@
+<xs:schema xmlns:tns="http://www.com.shop" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.com.shop" version="1.0">
+
+  <xs:element name="Order" type="tns:Order"/>
+
+  <xs:element name="OrderResponse" type="tns:OrderResponse"/>
+
+  <xs:element name="Registe" type="tns:Registe"/>
+
+  <xs:element name="RegisteResponse" type="tns:RegisteResponse"/>
+
+  <xs:element name="addProductCart" type="tns:addProductCart"/>
+
+  <xs:element name="addProductCartResponse" type="tns:addProductCartResponse"/>
+
+  <xs:element name="getPriceofProduct" type="tns:getPriceofProduct"/>
+
+  <xs:element name="getPriceofProductResponse" type="tns:getPriceofProductResponse"/>
+
+  <xs:element name="removeProductCart" type="tns:removeProductCart"/>
+
+  <xs:element name="removeProductCartResponse" type="tns:removeProductCartResponse"/>
+
+  <xs:complexType name="getPriceofProduct">
+    <xs:sequence>
+      <xs:element name="prodId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getPriceofProductResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="removeProductCart">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="removeProductCartResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="Order">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OrderResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="Registe">
+    <xs:sequence>
+      <xs:element name="username" type="xs:int"/>
+      <xs:element name="motDePasse" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="RegisteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addProductCart">
+    <xs:sequence>
+      <xs:element name="username" type="xs:int"/>
+      <xs:element name="prodId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addProductCartResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+</xs:schema>
